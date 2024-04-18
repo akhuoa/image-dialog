@@ -3,9 +3,20 @@ import Gallery from '@abi-software/gallery'
 import '@abi-software/gallery/dist/style.css'
 
 const props = defineProps({
-  imageDialogOpen: false,
-  imageIframeURL: '',
-  imageGalleryItems: []
+  imageDialogOpen: {
+    type: Boolean,
+    default: false
+  },
+  imageIframeURL: {
+    type: String,
+    default: ''
+  },
+  imageGalleryItems: {
+    type: Array,
+    default() {
+      return []
+    }
+  }
 })
 </script>
 

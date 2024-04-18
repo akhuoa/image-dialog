@@ -19,21 +19,32 @@ const galleryItems = [
     link: 'https://sparc.science/',
   },
 ]
-const imageIframeURL = '' // 'https://sparc.biolucida.net/image?c=NzQ5My1jb2wtMTkz'
-const imageDialogOpen = true
+const iframeURL = '' // 'https://sparc.biolucida.net/image?c=NzQ5My1jb2wtMTkz'
+const dialogOpen = true
 
 defineProps({
-  imageIframeURL: '',
-  imageGalleryItems: [],
-  imageDialogOpen: true
+  imageIframeURL: {
+    type: String,
+    default: ''
+  },
+  imageGalleryItems: {
+    type: Array,
+    default() {
+      return []
+    }
+  },
+  imageDialogOpen: {
+    type: Boolean,
+    default: true
+  }
 })
 </script>
 
 <template>
   <ImageDialog
-    :imageIframeURL="imageIframeURL"
+    :imageIframeURL="iframeURL"
     :imageGalleryItems="galleryItems"
-    :imageDialogOpen="imageDialogOpen"
+    :imageDialogOpen="dialogOpen"
   />
 </template>
 

@@ -1,4 +1,4 @@
-import path from "path";
+import { resolve } from "path";
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
@@ -14,7 +14,22 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': resolve(__dirname, './src'),
     }
   },
+  build: {
+    lib: {
+      entry: resolve(__dirname, './src/components/index.js'),
+      name: 'ImageDialog',
+      fileName: 'image-dialog'
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue'
+        }
+      }
+    }
+  }
 })

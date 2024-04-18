@@ -1,5 +1,2 @@
 import ImageDialog from './ImageDialog.vue'
-
-export {
-  ImageDialog
-}
+export default ImageDialog

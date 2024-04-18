@@ -1,8 +1,22 @@
 {
-  "name": "image-dialog",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@abi-software/image-dialog",
+  "version": "0.0.1",
   "type": "module",
+  "files": [
+    "dist/*",
+    "src/*",
+    "*.json",
+    "*.js"
+  ],
+  "main": "./dist/image-dialog.umd.cjs",
+  "module": "./dist/image-dialog.js",
+  "exports": {
+    ".": {
+      "import": "./dist/image-dialog.js",
+      "require": "./dist/image-dialog.umd.cjs"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
   "scripts": {
     "serve": "vite",
     "build-bundle": "vite build",

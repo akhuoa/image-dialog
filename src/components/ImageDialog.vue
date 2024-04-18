@@ -85,7 +85,6 @@ const props = defineProps({
       height: 80%;
       width: 80%;
       background: transparent;
-      border: 1px solid black;
       overflow: hidden;
 
       :deep(.gallery) {

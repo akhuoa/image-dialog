@@ -1,6 +1,11 @@
 {
   "name": "@abi-software/image-dialog",
   "version": "0.0.1",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ABI-Software/image-dialog.git"
+  },
   "type": "module",
   "files": [
     "dist/*",
@@ -21,7 +26,12 @@
     "serve": "vite",
     "build-bundle": "vite build",
     "preview": "vite preview",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "release:beta": "npm version prerelease --preid=beta; npm publish --tag beta",
+    "release:minor": "npm version minor; npm publish",
+    "release:patch": "npm version patch; npm publish",
+    "changelog": "auto-changelog -p --output CHANGELOG.md --template keepachangelog",
+    "version": "npm run build-bundle; npm run changelog; git add CHANGELOG.md"
   },
   "dependencies": {
     "@abi-software/gallery": "^0.5.0-vue3.5",

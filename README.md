@@ -67,3 +67,15 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+
+
+## API Documentation
+
+The API documentation is developed with `vitepress` and `vuese`. Documentation pages are in the `docs` folder.
+
+### To run in local development mode
+```bash
+npm run docs:watch
+```
+
+This will start the documentation server with `vitepress` on port `:5173` and watch the components' changes.

@@ -3,19 +3,31 @@ import Gallery from '@abi-software/gallery'
 import '@abi-software/gallery/dist/style.css'
 
 const props = defineProps({
+  /**
+   * The option to show/hide image dialog.
+   */
   imageDialogOpen: {
     type: Boolean,
-    default: false
+    default: false,
+    required: true
   },
+  /**
+   * The iframe URL of the image. Either this value or `imageGalleryItems`'s value must be provided.
+   */
   imageIframeURL: {
     type: String,
-    default: ''
+    default: '',
+    required: true
   },
+  /**
+   * The gallery items array. Either this value or `imageIframeURL`'s value must be provided.
+   */
   imageGalleryItems: {
     type: Array,
     default() {
       return []
-    }
+    },
+    required: true
   }
 })
 </script>

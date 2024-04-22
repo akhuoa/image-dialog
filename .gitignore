@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Cypress Test
+cypress/screenshots/
+cypress/reports/
+cypress/videos

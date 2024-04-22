@@ -27,3 +27,8 @@ dist-ssr
 docs/.vitepress/dist
 docs/.vitepress/cache
 docs/components
+
+# Cypress Test
+cypress/screenshots/
+cypress/reports/
+cypress/videos
